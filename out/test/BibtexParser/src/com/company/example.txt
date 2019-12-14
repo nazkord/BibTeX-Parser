@@ -1,0 +1,45 @@
+@ARTICLE{article-crossref,
+   crossref = "WHOLE-JOURNAL",
+   key = "",
+   author = {L[eslie] A. Aamport},
+   title = {The Gnats and Gnus Document Preparation System},
+   pages = "73+",
+   note = "This is a cross-referencing ARTICLE entry",
+}
+
+@String {maintainer = "Xavier D\'ecoret"}
+
+@preamble{lolbeka, "\newcommand{\noopsort}[1]{} "
+        # "\newcommand{\printfirst}[2]{#1} "
+        # "\newcommand{\singleletter}[1]{#1} "
+        # "\newcommand{\switchargs}[2]{#2#1} " }
+
+@ARTICLE{whole-journal,
+   key = "GAJ",
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   month = jul,
+   note = {The entire issue is devoted to gnats and gnus
+                (this entry is a cross-referenced ARTICLE (journal))},
+}
+
+The KEY field is here to override the KEY field in the journal being
+cross referenced (so is the NOTE field, in addition to its imparting
+information).
+
+@INBOOK {inbook-minimal,
+   author = "Donald E. Knuth",
+   title = "Fundamental Algorithms",
+   publisher = "Addison-Wesley",
+   year = "{\noopsort{1973b}}1973",
+   chapter = "1.2",
+}
+
+@String {firstname = "Xavier"}
+
+
+
+
+@String {lastname  = "Decoret"}
