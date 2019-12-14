@@ -32,7 +32,8 @@ public class Parser {
         fileInString.insert(0, System.lineSeparator()); //for parsing reasons
 
         //delete predefined strings
-        fileInString = new StringBuilder(fileInString.toString().replaceAll(StringVariableUtil.regex, ""));
+        StringBuilder s = new StringBuilder(fileInString.toString().replaceAll(StringVariableUtil.regex, ""));
+        fileInString = s;
         List<String> entriesInString = new LinkedList<>(parseToEntries(fileInString));
         entriesInString.remove(0); //for parsing reasons
         StringVariableUtil.parseExpandedStrings(entriesInString);

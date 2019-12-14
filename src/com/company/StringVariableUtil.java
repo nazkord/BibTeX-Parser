@@ -64,7 +64,7 @@ public class StringVariableUtil {
                 if(fields.size() > 1)
                     throw new IllegalArgumentException("String has more than one key-value inside");
                 AbstractMap.SimpleEntry<String, String> pair = EntryParser.parseEntryField(new StringBuilder(fields.get(0)));
-                stringsMap.put(pair.getKey(), pair.getValue());
+                stringsMap.put(pair.getKey().trim().toUpperCase(), pair.getValue());
             }
         }
     }

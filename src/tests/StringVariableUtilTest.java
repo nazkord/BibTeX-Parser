@@ -8,6 +8,9 @@ import org.junit.Test;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -37,4 +40,12 @@ public class StringVariableUtilTest {
         assertEquals("The OX Association for Computing Machinery",
                 StringVariableUtil.stringsMap.get("ACM"));
     }
+
+    @Test
+    public void testConcatenationOfStrings() {
+        List<String> entries = Collections.singletonList("String{email   = ACM # \".\" #  \"CSS\"}");
+        StringVariableUtil.parseExpandedStrings(entries);
+        assertEquals("The OX Association for Computing Machinery.CSS", StringVariableUtil.stringsMap.get("EMAIL"));
+    }
+
 }

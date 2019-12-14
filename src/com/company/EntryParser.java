@@ -50,7 +50,7 @@ public class EntryParser {
 
 
     public static void deleteEntryType(StringBuilder entryInString) {
-        entryInString.delete(0, entryInString.indexOf("{"));
+        entryInString.delete(0, entryInString.indexOf("{") + 1);
     }
 
     /**

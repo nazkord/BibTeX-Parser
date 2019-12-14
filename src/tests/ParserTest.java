@@ -18,7 +18,7 @@ public class ParserTest {
 
     {
         try {
-            file = new String(Files.readAllBytes(Paths.get("src/com/company/example.txt")));
+            file = new String(Files.readAllBytes(Paths.get("src/tests/example1.txt")));
         } catch (IOException e) {
             e.printStackTrace();
         }
