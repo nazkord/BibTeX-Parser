@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b9e2be1-c49f-4e4f-8acb-91c3284bcc10" name="Default Changelist" comment="" />
+    <list default="true" id="6b9e2be1-c49f-4e4f-8acb-91c3284bcc10" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/BibTex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BibTex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/StringVariableUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/StringVariableUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/EntryParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/EntryParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ParserTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,12 +23,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UZ1kS4oMzPq4aKP0fV8q3PBWYC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -30,12 +43,13 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last.edited.regexp" value="@String {firstname = &quot;Xavier&quot;}&#10;&#10;@String {lastname  = &quot;Decoret&quot;}" />
+    <property name="last.edited.regexp" value="firstname = &quot;Xavier&quot;}" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,9 +63,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.company" />
       <recent name="tests" />
       <recent name="com.company.parser" />
-      <recent name="com.company" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -60,8 +74,39 @@
       <recent name="$PROJECT_DIR$/src/com/company" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ParserTest.parserEntryTest">
-    <configuration name="EntryParserTest.getEntryKeyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BibTexTest.createOfFile">
+    <configuration name="BibTexTest.createOfFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BibtexParser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.BibTexTest" />
+      <option name="METHOD_NAME" value="createOfFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntryFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BibtexParser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.EntryFactoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntryParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BibtexParser" />
       <extension name="coverage">
         <pattern>
@@ -71,28 +116,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.EntryParserTest" />
-      <option name="METHOD_NAME" value="getEntryKeyTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BibtexParser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ParserTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParserTest.parseStrings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EntryParserTest.testGettingEntryField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BibtexParser" />
       <extension name="coverage">
         <pattern>
@@ -101,14 +130,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ParserTest" />
-      <option name="METHOD_NAME" value="parseStrings" />
+      <option name="MAIN_CLASS_NAME" value="tests.EntryParserTest" />
+      <option name="METHOD_NAME" value="testGettingEntryField" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParserTest.parserEntryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EntryParserTest.testGettingFieldValueWithStringVariable2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BibtexParser" />
       <extension name="coverage">
         <pattern>
@@ -117,43 +146,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ParserTest" />
-      <option name="METHOD_NAME" value="parserEntryTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParserTest.parserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BibtexParser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ParserTest" />
-      <option name="METHOD_NAME" value="parserTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.EntryParserTest" />
+      <option name="METHOD_NAME" value="testGettingFieldValueWithStringVariable2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ParserTest.parserEntryTest" />
-      <item itemvalue="JUnit.EntryParserTest.getEntryKeyTest" />
-      <item itemvalue="JUnit.ParserTest.parseStrings" />
-      <item itemvalue="JUnit.ParserTest.parserTest" />
-      <item itemvalue="JUnit.ParserTest" />
+      <item itemvalue="JUnit.EntryParserTest" />
+      <item itemvalue="JUnit.EntryParserTest.testGettingFieldValueWithStringVariable2" />
+      <item itemvalue="JUnit.BibTexTest.createOfFile" />
+      <item itemvalue="JUnit.EntryFactoryTest" />
+      <item itemvalue="JUnit.EntryParserTest.testGettingEntryField" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ParserTest.parserEntryTest" />
-        <item itemvalue="JUnit.ParserTest" />
-        <item itemvalue="JUnit.ParserTest.parserTest" />
-        <item itemvalue="JUnit.ParserTest.parseStrings" />
-        <item itemvalue="JUnit.EntryParserTest.getEntryKeyTest" />
+        <item itemvalue="JUnit.BibTexTest.createOfFile" />
+        <item itemvalue="JUnit.EntryParserTest.testGettingEntryField" />
+        <item itemvalue="JUnit.EntryFactoryTest" />
+        <item itemvalue="JUnit.EntryParserTest" />
+        <item itemvalue="JUnit.EntryParserTest.testGettingFieldValueWithStringVariable2" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +207,8 @@
       <workItem from="1575980588415" duration="1589000" />
       <workItem from="1575985938450" duration="1669000" />
       <workItem from="1576056648791" duration="9154000" />
-      <workItem from="1576326035105" duration="379000" />
+      <workItem from="1576326035105" duration="15316000" />
+      <workItem from="1576356402173" duration="653000" />
     </task>
     <servers />
   </component>
@@ -202,10 +216,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="595" y="152" key="#com.intellij.ide.util.MemberChooser" timestamp="1576065943852">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="453" y="116" key="#com.intellij.ide.util.MemberChooser" timestamp="1576351340415">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="453" y="116" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1575890733130" />
+    <state x="453" y="116" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1576351340415" />
     <state x="595" y="152" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1576065943852" />
     <state x="378" y="167" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1575982111805">
       <screen x="0" y="0" width="1280" height="800" />
@@ -219,63 +233,64 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="154" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1280.800@0.0.1280.800" timestamp="1575914592682" />
-    <state x="694" y="144" width="798" height="579" key="#xdebugger.evaluate" timestamp="1576067784094">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="529" y="110" width="486" height="579" key="#xdebugger.evaluate" timestamp="1576354705663">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="529" y="110" key="#xdebugger.evaluate/0.0.1280.800@0.0.1280.800" timestamp="1575914336464" />
+    <state x="529" y="110" width="486" height="579" key="#xdebugger.evaluate/0.0.1280.800@0.0.1280.800" timestamp="1576354705663" />
     <state x="694" y="144" width="798" height="579" key="#xdebugger.evaluate/0.0.1680.1050@0.0.1680.1050" timestamp="1576067784094" />
     <state x="389" y="145" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1575907413795">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="389" y="145" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.800@0.0.1280.800" timestamp="1575907413795" />
-    <state width="1638" height="415" key="GridCell.Tab.0.bottom" timestamp="1576068029090">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1238" height="234" key="GridCell.Tab.0.bottom" timestamp="1576355670352">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1638" height="301" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1576006119098" />
+    <state width="1238" height="234" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1576355670352" />
     <state width="1638" height="415" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029090" />
-    <state width="1638" height="415" key="GridCell.Tab.0.center" timestamp="1576068029089">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1238" height="234" key="GridCell.Tab.0.center" timestamp="1576355670351">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1638" height="301" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1576006119097" />
+    <state width="1238" height="234" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1576355670351" />
     <state width="1638" height="415" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029089" />
-    <state width="1638" height="415" key="GridCell.Tab.0.left" timestamp="1576068029088">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1238" height="234" key="GridCell.Tab.0.left" timestamp="1576355670351">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1638" height="301" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1576006119096" />
+    <state width="1238" height="234" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1576355670351" />
     <state width="1638" height="415" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029088" />
-    <state width="1638" height="415" key="GridCell.Tab.0.right" timestamp="1576068029089">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1238" height="234" key="GridCell.Tab.0.right" timestamp="1576355670352">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1638" height="301" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1576006119098" />
+    <state width="1238" height="234" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1576355670352" />
     <state width="1638" height="415" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029089" />
-    <state width="1638" height="415" key="GridCell.Tab.1.bottom" timestamp="1576068029092">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1238" height="337" key="GridCell.Tab.1.bottom" timestamp="1576355670347">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="302" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1575985859361" />
+    <state width="1238" height="337" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1576355670347" />
     <state width="1638" height="415" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029092" />
-    <state width="1638" height="415" key="GridCell.Tab.1.center" timestamp="1576068029091">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1238" height="337" key="GridCell.Tab.1.center" timestamp="1576355670347">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="302" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1575985859360" />
+    <state width="1238" height="337" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1576355670347" />
     <state width="1638" height="415" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029091" />
-    <state width="1638" height="415" key="GridCell.Tab.1.left" timestamp="1576068029090">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1238" height="337" key="GridCell.Tab.1.left" timestamp="1576355670346">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="302" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1575985859359" />
+    <state width="1238" height="337" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1576355670346" />
     <state width="1638" height="415" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029090" />
-    <state width="1638" height="415" key="GridCell.Tab.1.right" timestamp="1576068029092">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1238" height="337" key="GridCell.Tab.1.right" timestamp="1576355670347">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="302" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1575985859360" />
+    <state width="1238" height="337" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1576355670347" />
     <state width="1638" height="415" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029092" />
     <state x="168" y="0" key="SettingsEditor" timestamp="1575986512396">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="128" y="0" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1575985856851" />
     <state x="168" y="0" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1575986512396" />
-    <state width="840" height="525" key="XDebugger.FullValuePopup" timestamp="1576067908678">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="640" height="400" key="XDebugger.FullValuePopup" timestamp="1576354924274">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state width="640" height="400" key="XDebugger.FullValuePopup/0.0.1280.800@0.0.1280.800" timestamp="1576354924274" />
     <state width="840" height="525" key="XDebugger.FullValuePopup/0.0.1680.1050@0.0.1680.1050" timestamp="1576067908678" />
     <state x="319" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1576326265294">
       <screen x="0" y="0" width="1280" height="800" />
@@ -290,33 +305,17 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="168" y="9" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1575586483561" />
-    <state x="419" y="134" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1575982113606">
+    <state x="419" y="134" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1576352784104">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="419" y="134" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.800@0.0.1280.800" timestamp="1575982113606" />
+    <state x="419" y="134" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.800@0.0.1280.800" timestamp="1576352784104" />
     <state x="378" y="170" key="extract.method.dialog" timestamp="1575888164658">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="170" key="extract.method.dialog/0.0.1280.800@0.0.1280.800" timestamp="1575888164658" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1575910975099">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1576330382260">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1575910975099" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/EntryParser.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/Parser.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1576330382260" />
   </component>
 </project>

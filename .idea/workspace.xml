@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b9e2be1-c49f-4e4f-8acb-91c3284bcc10" name="Default Changelist" comment="" />
+    <list default="true" id="6b9e2be1-c49f-4e4f-8acb-91c3284bcc10" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/StringVariableUtilTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/example1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibtexParser/com/company/BibTex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibtexParser/com/company/BibTex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibtexParser/com/company/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibtexParser/com/company/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibtexParser/com/company/StringVariableUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibtexParser/com/company/StringVariableUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibtexParser/tests/EntryParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibtexParser/tests/EntryParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibtexParser/tests/ParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibtexParser/tests/ParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibtexParser/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibtexParser/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibtexParser/tests/EntryParserTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/BibTex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BibTex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/EntryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/EntryParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/StringVariableUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/StringVariableUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/EntryParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/EntryParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ParserTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +38,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UZ1kS4oMzPq4aKP0fV8q3PBWYC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -30,6 +53,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
@@ -49,8 +73,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.company" />
       <recent name="tests" />
+      <recent name="com.company" />
       <recent name="com.company.parser" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -60,7 +84,7 @@
       <recent name="$PROJECT_DIR$/src/com/company" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EntryParserTest.testGettingEntryField">
+  <component name="RunManager" selected="JUnit.StringVariableUtilTest">
     <configuration name="BibTexTest.createOfFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BibtexParser" />
       <extension name="coverage">
@@ -73,36 +97,6 @@
       <option name="MAIN_CLASS_NAME" value="tests.BibTexTest" />
       <option name="METHOD_NAME" value="createOfFile" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EntryFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BibtexParser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.EntryFactoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EntryParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BibtexParser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.EntryParserTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EntryParserTest.testGettingFieldValueWithStringVariable2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StringVariableUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BibtexParser" />
       <extension name="coverage">
         <pattern>
@@ -132,27 +126,58 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.EntryParserTest" />
-      <option name="METHOD_NAME" value="testGettingFieldValueWithStringVariable2" />
+      <option name="MAIN_CLASS_NAME" value="tests.StringVariableUtilTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringVariableUtilTest.createMapOfStrings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BibtexParser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.StringVariableUtilTest" />
+      <option name="METHOD_NAME" value="createMapOfStrings" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringVariableUtilTest.testMapOfStrings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BibtexParser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.StringVariableUtilTest" />
+      <option name="METHOD_NAME" value="testMapOfStrings" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.EntryParserTest" />
-      <item itemvalue="JUnit.EntryParserTest.testGettingFieldValueWithStringVariable2" />
       <item itemvalue="JUnit.BibTexTest.createOfFile" />
-      <item itemvalue="JUnit.EntryFactoryTest" />
       <item itemvalue="JUnit.EntryParserTest.testGettingEntryField" />
+      <item itemvalue="JUnit.StringVariableUtilTest.createMapOfStrings" />
+      <item itemvalue="JUnit.StringVariableUtilTest.testMapOfStrings" />
+      <item itemvalue="JUnit.StringVariableUtilTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EntryParserTest.testGettingEntryField" />
+        <item itemvalue="JUnit.StringVariableUtilTest" />
+        <item itemvalue="JUnit.StringVariableUtilTest.testMapOfStrings" />
+        <item itemvalue="JUnit.StringVariableUtilTest.createMapOfStrings" />
         <item itemvalue="JUnit.BibTexTest.createOfFile" />
-        <item itemvalue="JUnit.EntryFactoryTest" />
-        <item itemvalue="JUnit.EntryParserTest" />
-        <item itemvalue="JUnit.EntryParserTest.testGettingFieldValueWithStringVariable2" />
+        <item itemvalue="JUnit.EntryParserTest.testGettingEntryField" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +219,7 @@
       <workItem from="1575985938450" duration="1669000" />
       <workItem from="1576056648791" duration="9154000" />
       <workItem from="1576326035105" duration="15316000" />
+      <workItem from="1576356402173" duration="1448000" />
     </task>
     <servers />
   </component>
@@ -201,15 +227,19 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="100" y="100" width="1080" height="600" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1576357534453">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="100" y="100" width="1080" height="600" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.800@0.0.1280.800" timestamp="1576357534453" />
     <state x="453" y="116" key="#com.intellij.ide.util.MemberChooser" timestamp="1576351340415">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="453" y="116" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1576351340415" />
     <state x="595" y="152" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1576065943852" />
-    <state x="378" y="167" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1575982111805">
+    <state x="378" y="167" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1576357229961">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="378" y="167" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1280.800@0.0.1280.800" timestamp="1575982111805" />
+    <state x="378" y="167" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1280.800@0.0.1280.800" timestamp="1576357229961" />
     <state x="132" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575889578861">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -227,25 +257,29 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="389" y="145" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.800@0.0.1280.800" timestamp="1575907413795" />
-    <state width="1238" height="234" key="GridCell.Tab.0.bottom" timestamp="1576355670352">
+    <state x="234" y="0" key="CommitChangelistDialog2" timestamp="1576358036904">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="234" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1576355670352" />
+    <state x="234" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1576358036904" />
+    <state width="1238" height="234" key="GridCell.Tab.0.bottom" timestamp="1576357732500">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="234" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1576357732500" />
     <state width="1638" height="415" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029090" />
-    <state width="1238" height="234" key="GridCell.Tab.0.center" timestamp="1576355670351">
+    <state width="1238" height="234" key="GridCell.Tab.0.center" timestamp="1576357732498">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="234" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1576355670351" />
+    <state width="1238" height="234" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1576357732498" />
     <state width="1638" height="415" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029089" />
-    <state width="1238" height="234" key="GridCell.Tab.0.left" timestamp="1576355670351">
+    <state width="1238" height="234" key="GridCell.Tab.0.left" timestamp="1576357732498">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="234" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1576355670351" />
+    <state width="1238" height="234" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1576357732498" />
     <state width="1638" height="415" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029088" />
-    <state width="1238" height="234" key="GridCell.Tab.0.right" timestamp="1576355670352">
+    <state width="1238" height="234" key="GridCell.Tab.0.right" timestamp="1576357732499">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="234" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1576355670352" />
+    <state width="1238" height="234" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1576357732499" />
     <state width="1638" height="415" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1576068029089" />
     <state width="1238" height="337" key="GridCell.Tab.1.bottom" timestamp="1576355670347">
       <screen x="0" y="0" width="1280" height="800" />
@@ -290,10 +324,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="168" y="9" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1575586483561" />
-    <state x="419" y="134" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1576352784104">
+    <state x="419" y="134" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1576357232943">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="419" y="134" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.800@0.0.1280.800" timestamp="1576352784104" />
+    <state x="419" y="134" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.800@0.0.1280.800" timestamp="1576357232943" />
     <state x="378" y="170" key="extract.method.dialog" timestamp="1575888164658">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

@@ -20,7 +20,7 @@ public class BibTex {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        StringVariableUtil.createHashMapOfStrings(bibTex.getFileInString());
+        StringVariableUtil.createMapOfStrings(bibTex.getFileInString());
         bibTex.parser = new Parser(bibTex.getFileInString());
         bibTex.entries = bibTex.getParser().parse();
         return bibTex;

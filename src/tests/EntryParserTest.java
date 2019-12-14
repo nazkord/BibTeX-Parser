@@ -87,7 +87,7 @@ public class EntryParserTest {
     @Test
     public void testGettingFieldValueWithStringVariable() {
         StringBuilder file = new StringBuilder("@String{mar = \"march\"}");
-        StringVariableUtil.createHashMapOfStrings(file);
+        StringVariableUtil.createMapOfStrings(file);
         String values = "\"1~\" # mar";
         assertEquals("1~march", EntryParser.parseFieldValues(values));
     }
@@ -96,7 +96,7 @@ public class EntryParserTest {
     public void testGettingFieldValueWithStringVariable2() {
         StringBuilder file = new StringBuilder("@String {firstname = \"Xavier\"}\n" +
                 "@String {lastname  = \"Decoret\"}");
-        StringVariableUtil.createHashMapOfStrings(file);
+        StringVariableUtil.createMapOfStrings(file);
         String values = "firstname # \".\" # lastname # \"@imag.fr\"}";
         assertEquals("Xavier.Decoret@imag.fr", EntryParser.parseFieldValues(values));
     }

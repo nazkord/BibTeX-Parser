@@ -38,7 +38,7 @@ public class ParserTest {
 
     @Test
     public void parseStrings() {
-        StringVariableUtil.createHashMapOfStrings(parser.getFileInString());
+        StringVariableUtil.createMapOfStrings(parser.getFileInString());
         for(Map.Entry<String, String> entry : StringVariableUtil.stringsMap.entrySet()) {
             System.out.println(entry.getKey() + ":" + entry.getValue());
         }

@@ -89,7 +89,6 @@ public class EntryParser {
      * @return Pair of key - value when the correct data has been provided
      */
     public static AbstractMap.SimpleEntry<String, String> parseEntryField(StringBuilder entryField) {
-        System.out.println(entryField);
         String key = entryField.substring(0, entryField.indexOf("="));
         String preValue = entryField.substring(entryField.indexOf("=") + 1, entryField.length());
         String value = parseFieldValues(preValue);

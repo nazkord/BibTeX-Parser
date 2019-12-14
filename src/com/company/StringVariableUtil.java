@@ -8,25 +8,25 @@ import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
 
 /**
- *
+ * Util for create and use map of string variables provided in input file
  */
 public class StringVariableUtil {
 
     /**
-     *
+     *  Map that contains every string that was detected in file
      */
     public static Map<String, String> stringsMap = new HashMap<>();
 
     /**
-     *
+     *  Regex for finding String variables without concatenation
      */
     public static final String regex = "@String\\s*\\{\\s*[a-zA-z0-9]+\\s*=\\s*\".*\"\\s*}";
 
     /**
-     *
-     * @param fileInString
+     * Creates map of string variables from input file
+     * @param fileInString input file converted to string
      */
-    public static void createHashMapOfStrings(StringBuilder fileInString) {
+    public static void createMapOfStrings(StringBuilder fileInString) {
         String[] strings = regexStrings(fileInString);
         for (String variable:
              strings) {
@@ -38,9 +38,9 @@ public class StringVariableUtil {
     }
 
     /**
-     *
-     * @param fileInString
-     * @return
+     * Create array of string variables that does not contain concatenation
+     * @param fileInString input file converted to string
+     * @return array of string variables
      */
     private static String[] regexStrings(StringBuilder fileInString) {
         return Pattern.compile(regex, Pattern.CASE_INSENSITIVE | Pattern.MULTILINE)
@@ -50,7 +50,10 @@ public class StringVariableUtil {
                 .toArray(String[]::new);
     }
 
-
+    /**
+     * Adds to map string variables with concatenation
+     * @param entriesInString list of strings that contains particularly entry
+     */
     public static void parseExpandedStrings(List<String> entriesInString) {
         for (String entry:
              entriesInString) {
@@ -65,5 +68,4 @@ public class StringVariableUtil {
             }
         }
     }
-
 }

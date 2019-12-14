@@ -35,10 +35,11 @@ public class Parser {
         fileInString = new StringBuilder(fileInString.toString().replaceAll(StringVariableUtil.regex, ""));
         List<String> entriesInString = new LinkedList<>(parseToEntries(fileInString));
         entriesInString.remove(0); //for parsing reasons
+        StringVariableUtil.parseExpandedStrings(entriesInString);
 
         deleteEntriesByPattern(entriesInString, "PREAMBLE");
         deleteEntriesByPattern(entriesInString, "COMMENT");
-
+        deleteEntriesByPattern(entriesInString, "STRING");
 
         List<Entry> entries = new ArrayList<>();
         for (String entryInString:
