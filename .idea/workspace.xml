@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b9e2be1-c49f-4e4f-8acb-91c3284bcc10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/StringVariableUtilTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/example1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibtexParser/com/company/BibTex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibtexParser/com/company/BibTex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibtexParser/com/company/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibtexParser/com/company/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibtexParser/com/company/StringVariableUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibtexParser/com/company/StringVariableUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibtexParser/tests/EntryParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibtexParser/tests/EntryParserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibtexParser/tests/ParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibtexParser/tests/ParserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibtexParser/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibtexParser/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibtexParser/tests/EntryParserTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/BibTex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BibTex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/EntryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/EntryParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/StringVariableUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/StringVariableUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/EntryParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/EntryParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibtexParser/com/company/EntryParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibtexParser/com/company/EntryParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibtexParser/com/company/EntryParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibtexParser/com/company/EntryParser.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,14 +204,30 @@
       <workItem from="1575985938450" duration="1669000" />
       <workItem from="1576056648791" duration="9154000" />
       <workItem from="1576326035105" duration="15316000" />
-      <workItem from="1576356402173" duration="1448000" />
+      <workItem from="1576356402173" duration="1672000" />
     </task>
+    <task id="LOCAL-00001" summary="-added documentation for StringVariableUtil.class&#10;-added test for mentioned above class">
+      <created>1576358039272</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576358039272</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="-added documentation for StringVariableUtil.class&#10;-added test for mentioned above class" />
+    <option name="LAST_COMMIT_MESSAGE" value="-added documentation for StringVariableUtil.class&#10;-added test for mentioned above class" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="240" y="65" key="#Notifications" timestamp="1576358067593">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="240" y="65" key="#Notifications/0.0.1280.800@0.0.1280.800" timestamp="1576358067593" />
     <state x="100" y="100" width="1080" height="600" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1576357534453">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -306,6 +307,10 @@
     </state>
     <state x="128" y="0" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1575985856851" />
     <state x="168" y="0" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1575986512396" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1576358043093">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1576358043093" />
     <state width="640" height="400" key="XDebugger.FullValuePopup" timestamp="1576354924274">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
