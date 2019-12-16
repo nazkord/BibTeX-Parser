@@ -2,8 +2,15 @@ package com.company;
 
 import com.company.model.*;
 
+import java.util.List;
+
 public class Printer {
-    public static void printEntry(Entry entry) {
+
+    public static void printBibTex(List<Entry> entries) {
+        entries.forEach(Printer::printEntry);
+    }
+
+    private static void printEntry(Entry entry) {
         String leftAlignFormat = "| %-22s | %-60s |%n";
 
         StringBuilder body = new StringBuilder();

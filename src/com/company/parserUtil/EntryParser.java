@@ -1,5 +1,6 @@
-package com.company;
+package com.company.parserUtil;
 
+import com.company.EntryFactory;
 import com.company.model.*;
 
 import java.util.*;
@@ -103,7 +104,7 @@ public class EntryParser {
     public static String parseFieldValues(String fieldValue) {
         StringBuilder finalFieldValue = new StringBuilder();
         if(!fieldValue.contains("\"")) {
-            return StringVariableUtil.stringsMap.getOrDefault(fieldValue, fieldValue);
+            return StringVariableUtil.stringsMap.getOrDefault(fieldValue.trim().toUpperCase(), fieldValue);
         }
 
         String[] fieldValues = fieldValue.split("#");
@@ -125,10 +126,14 @@ public class EntryParser {
      */
     private static String getValueFromQuotationMarks(String s) {
         if(!s.contains("\""))
-            throw new IllegalArgumentException("Bad values provided");
+            throw new IllegalArgumentException("Bad values provided: " + s);
 
-        s = s.substring(s.indexOf("\"") + 1, s.length());
-        s = s.substring(0, s.lastIndexOf("\""));
+        try {
+            s = s.substring(s.indexOf("\"") + 1, s.length());
+            s = s.substring(0, s.lastIndexOf("\""));
+        } catch (Exception e) {
+            System.out.println(e.getMessage() + ": " + s);
+        }
         return s;
     }
 }

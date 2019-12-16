@@ -1,14 +1,13 @@
 package tests;
 
-import com.company.Parser;
-import com.company.StringVariableUtil;
+import com.company.parserUtil.Parser;
+import com.company.parserUtil.StringVariableUtil;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 

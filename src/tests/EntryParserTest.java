@@ -1,7 +1,7 @@
 package tests;
 
-import com.company.EntryParser;
-import com.company.StringVariableUtil;
+import com.company.parserUtil.EntryParser;
+import com.company.parserUtil.StringVariableUtil;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.exceptions.UnCorrectTypeException;
 import com.company.model.*;
 
 import java.util.EnumMap;
@@ -49,7 +50,7 @@ public class EntryFactory {
                 return new UnPublished(type, key, allFields);
             }
             default: {
-                throw new IllegalArgumentException("There is not entry type such as provided");
+                throw new UnCorrectTypeException("There is not entry type such as provided: " + type);
             }
         }
     }

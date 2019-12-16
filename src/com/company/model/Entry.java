@@ -1,9 +1,8 @@
 package com.company.model;
 
 import com.company.exceptions.EntryHasUnCorrectOptionalFields;
-import com.company.exceptions.NotEnoughRequiredFields;
+import com.company.exceptions.EntryHasNotEnoughRequiredFields;
 
-import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
@@ -63,7 +62,7 @@ public abstract class Entry {
     protected void checkRequiredFields() {
         this.hasAllRequiredFields = allFields.keySet().containsAll(requiredFieldsList);
         if(!this.hasAllRequiredFields) {
-            throw new NotEnoughRequiredFields("Entry doesn't have all required fields");
+            throw new EntryHasNotEnoughRequiredFields("Entry doesn't have all required fields");
         }
     }
 
@@ -76,7 +75,7 @@ public abstract class Entry {
             if(!requiredFieldsList.contains(type)) {
                 if(!optionalFieldsList.contains(type)) {
                     hasCorrectOptionalFields = false;
-                    throw new EntryHasUnCorrectOptionalFields("Entry has odd optional field(s)");
+                    throw new EntryHasUnCorrectOptionalFields("Entry(" + this.type + ") has odd optional field(s): " + type);
                 }
             }
         }

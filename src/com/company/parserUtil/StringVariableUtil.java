@@ -1,4 +1,4 @@
-package com.company;
+package com.company.parserUtil;
 
 import java.util.AbstractMap;
 import java.util.HashMap;

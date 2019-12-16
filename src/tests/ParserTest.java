@@ -1,8 +1,8 @@
 package tests;
 
-import com.company.EntryParser;
-import com.company.Parser;
-import com.company.StringVariableUtil;
+import com.company.parserUtil.EntryParser;
+import com.company.parserUtil.Parser;
+import com.company.parserUtil.StringVariableUtil;
 import org.junit.Test;
 
 import java.io.IOException;

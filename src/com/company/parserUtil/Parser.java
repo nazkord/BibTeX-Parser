@@ -1,4 +1,4 @@
-package com.company;
+package com.company.parserUtil;
 
 import com.company.model.Entry;
 
@@ -32,7 +32,7 @@ public class Parser {
      *
      * @return
      */
-    public List<Entry> parse() {
+    public Map<String, Entry> parse() {
         deleteBeforeAtSign(fileInString); //delete everything before first entry
         fileInString.insert(0, System.lineSeparator()); //for parsing reasons
 
@@ -52,7 +52,7 @@ public class Parser {
              entriesInString) {
             entries.add(EntryParser.parseEntryOf(new StringBuilder(entryInString)));
         }
-        return entries;
+        return convertToMap(entries);
     }
 
     /**
@@ -74,9 +74,17 @@ public class Parser {
         return Arrays.asList(entries);
     }
 
+    /**
+     *
+     * @param entries
+     * @return
+     */
     private Map<String, Entry> convertToMap(List<Entry> entries) {
-        //TODO: convert list to map with key;
-        return null;
+        Map<String, Entry> entriesMap = new HashMap<>();
+        entries.forEach(entry -> {
+            entriesMap.put(entry.getKey(), entry);
+        });
+        return entriesMap;
     }
 
     /**

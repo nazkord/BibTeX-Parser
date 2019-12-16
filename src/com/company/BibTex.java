@@ -1,17 +1,19 @@
 package com.company;
 
+import com.company.parserUtil.Parser;
+import com.company.parserUtil.StringVariableUtil;
+import com.company.model.Entry;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
-
-import com.company.model.*;
+import java.util.Map;
 
 public class BibTex {
 
     private StringBuilder fileInString;
     private Parser parser;
-    private List<Entry> entries;
+    private Map<String, Entry> entries;
 
     public static BibTex createOfFile(String filePath) {
         BibTex bibTex = new BibTex();
@@ -48,7 +50,7 @@ public class BibTex {
         return parser;
     }
 
-    public List<Entry> getEntries() {
+    public Map<String, Entry> getEntriesMap() {
         return entries;
     }
 }
