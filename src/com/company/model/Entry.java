@@ -3,6 +3,8 @@ package com.company.model;
 import com.company.exceptions.EntryHasUnCorrectOptionalFields;
 import com.company.exceptions.EntryHasNotEnoughRequiredFields;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -108,5 +110,51 @@ public abstract class Entry {
 
     public Map<FieldType, String> getAllFields() {
         return allFields;
+    }
+
+    /**
+     * Prints entry
+     * @return readable for user string that shows entry
+     */
+    @Override
+    public String toString() {
+        final String leftAlignFormat = "| %-22s | %-60s |%n";
+
+        StringBuilder body = new StringBuilder();
+        for (Map.Entry<FieldType, String> field : allFields.entrySet()) {
+            String key = field.getKey().toString().toLowerCase();
+            String value = field.getValue();
+            if (key.trim().toUpperCase().equals("AUTHOR") || key.trim().toUpperCase().equals("EDITOR")) {
+                printAuthorOrEditor(body, key, value);
+            } else {
+                body.append(String.format(leftAlignFormat, key, value));
+            }
+            body.append(String.format("+------------------------+--------------------------------------------------------------+%n"));
+        }
+
+        StringBuilder full = new StringBuilder();
+        String header = String.format("+---------------------------------------------------------------------------------------+%n") +
+                String.format("| %-85s |%n", type + " (" + key + ")") +
+                String.format("+------------------------+--------------------------------------------------------------+%n");
+        full.append(header);
+        full.append(body);
+
+        return full.toString();
+    }
+
+    /**
+     * Prints multiple authors or editors as list
+     * @param body string with print result
+     * @param key author or editor
+     * @param value authors or editors
+     */
+    private void printAuthorOrEditor(StringBuilder body, String key, String value) {
+        String[] values = value.split("and ");
+        List<String> valuesList = new ArrayList<>(Arrays.asList(values));
+        body.append(String.format("| %-22s | %-60s |%n", key, valuesList.get(0)));
+        valuesList.remove(0);
+        valuesList.forEach(s -> {
+            body.append(String.format("| %-22s | %-60s |%n", "", s));
+        });
     }
 }

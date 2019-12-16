@@ -36,4 +36,6 @@ public class InputHandler {
         BibTex bibTex = BibTex.createOfFile(filePath);
         Printer.printBibTex(new ArrayList<>(bibTex.getEntriesMap().values()));
     }
+
+
 }
