@@ -1,5 +1,8 @@
 package com.company.model;
 
+import com.company.exceptions.EntryHasUnCorrectOptionalFields;
+import com.company.exceptions.NotEnoughRequiredFields;
+
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
@@ -59,6 +62,9 @@ public abstract class Entry {
      */
     protected void checkRequiredFields() {
         this.hasAllRequiredFields = allFields.keySet().containsAll(requiredFieldsList);
+        if(!this.hasAllRequiredFields) {
+            throw new NotEnoughRequiredFields("Entry doesn't have all required fields");
+        }
     }
 
     /**
@@ -70,7 +76,7 @@ public abstract class Entry {
             if(!requiredFieldsList.contains(type)) {
                 if(!optionalFieldsList.contains(type)) {
                     hasCorrectOptionalFields = false;
-                    return;
+                    throw new EntryHasUnCorrectOptionalFields("Entry has odd optional field(s)");
                 }
             }
         }
@@ -80,14 +86,28 @@ public abstract class Entry {
     /**
      * Checks if record (Entry) which can have volume or number as optional field
      * has optional fields other than are mentioned in BibTex documentation
+     * If doesn't have throw an appropriate exception
      */
     protected void checkOptionalFieldsWithVolumeOrNumber() {
         //return false when volume and number present simultaneously (at the same time)
         hasCorrectOptionalFields = !(allFields.containsKey(FieldType.VOLUME) &&
                 allFields.containsKey(FieldType.NUMBER));
-        if(hasCorrectOptionalFields) {
+        if (hasCorrectOptionalFields) {
             checkOptionalFields();
+        } else {
+            throw new EntryHasUnCorrectOptionalFields("Entry has Volume and Number optional fields at the same time");
         }
     }
 
+    public EntryType getType() {
+        return type;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public Map<FieldType, String> getAllFields() {
+        return allFields;
+    }
 }

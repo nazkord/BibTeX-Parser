@@ -15,9 +15,14 @@ public class Parser {
      */
     private StringBuilder fileInString;
 
+    /**
+     *
+     * @param fileInString
+     */
     public Parser(StringBuilder fileInString) {
         this.fileInString = fileInString;
     }
+
 
     public StringBuilder getFileInString() {
         return fileInString;
@@ -50,11 +55,20 @@ public class Parser {
         return entries;
     }
 
+    /**
+     *
+     * @param fileInString
+     */
     private void deleteBeforeAtSign(StringBuilder fileInString) {
         int b = fileInString.indexOf("@");
         fileInString.delete(0,b);
     }
 
+    /**
+     *
+     * @param fileInString
+     * @return
+     */
     private List<String> parseToEntries(StringBuilder fileInString) {
         String[] entries = fileInString.toString().split("\\n@");
         return Arrays.asList(entries);
@@ -65,6 +79,11 @@ public class Parser {
         return null;
     }
 
+    /**
+     *
+     * @param entries
+     * @param pattern
+     */
     private void deleteEntriesByPattern(List<String> entries, String pattern) {
         entries.removeAll(entries.stream()
                 .filter(string -> EntryParser.getEntryType(new StringBuilder(string)).toUpperCase().equals(pattern))
