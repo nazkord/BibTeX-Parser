@@ -1,9 +1,6 @@
 package com.company;
 
-import com.company.model.Entry;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class InputHandler {
 
@@ -14,7 +11,6 @@ public class InputHandler {
         if(args.length == 1) {
             optionDisplay(args[0]);
         }
-
     }
 
     private static void optionWithoutArguments() {
