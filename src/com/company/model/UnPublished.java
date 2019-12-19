@@ -15,5 +15,7 @@ public class UnPublished extends Entry {
                 FieldType.MONTH,
                 FieldType.YEAR
         );
+        super.checkRequiredFields();
+        super.checkOptionalFields();
     }
 }

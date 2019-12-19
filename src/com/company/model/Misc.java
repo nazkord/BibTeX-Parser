@@ -7,7 +7,6 @@ import java.util.Map;
 public class Misc extends Entry {
     public Misc(EntryType type, String key, Map<FieldType, String> allFields) {
         super(type, key, allFields);
-        //TODO: what if misc's optional passed fields are empty?
         requiredFieldsList = Collections.emptyList();
         optionalFieldsList = Arrays.asList(
                 FieldType.AUTHOR,

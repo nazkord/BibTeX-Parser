@@ -31,7 +31,7 @@ public class StringVariableUtilTest {
 
     @Test
     public void testSizeOfMapOfStrings() {
-        assertEquals(2, StringVariableUtil.stringsMap.size());
+        assertEquals(3, StringVariableUtil.stringsMap.size());
     }
 
     @Test

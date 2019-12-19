@@ -3,11 +3,20 @@ package com.company;
 import com.company.exceptions.UnCorrectTypeException;
 import com.company.model.*;
 
-import java.util.EnumMap;
 import java.util.Map;
 
+/**
+ * Factory that create an entry by passed arguments
+ */
 public class EntryFactory {
-    // method that will create a new instance of entry
+
+    /**
+     * Creates new Entry based on params
+     * @param type The type of entry
+     * @param key Entry's key
+     * @param allFields Fields of entry provided as Map (fieldName - fieldValue)
+     * @return new Entry specified in BibTex documentation
+     */
     public static Entry createEntryOf(EntryType type, String key, Map<FieldType, String> allFields) {
         switch (type) {
             case ARTICLE: {

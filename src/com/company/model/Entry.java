@@ -10,7 +10,6 @@ import java.util.Map;
 
 /**
  * This class represents object of BibTex record.
- * todo!!!write more
  * <p>
  */
 public abstract class Entry {
@@ -35,15 +34,6 @@ public abstract class Entry {
      * Collection of optional fields for particular record (Entry) type that are provided in BibTex documentation
      */
     protected List<FieldType> optionalFieldsList;
-    /**
-     * Defines whether record has all required fields
-     */
-    public Boolean hasAllRequiredFields;
-    /**
-     * Defines whether record doesn't have fields that are not provided in BibTex documentation
-     */
-    public Boolean hasCorrectOptionalFields;
-
 
     /**
      * Initializes record type with given parameters
@@ -57,13 +47,12 @@ public abstract class Entry {
         this.allFields = allFields;
     }
 
-
     /**
      * Checks if record (Entry) contains all required fields that are mentioned in BibTex documentation
      */
     protected void checkRequiredFields() {
-        this.hasAllRequiredFields = allFields.keySet().containsAll(requiredFieldsList);
-        if(!this.hasAllRequiredFields) {
+        boolean checked = allFields.keySet().containsAll(requiredFieldsList);
+        if(!checked) {
             throw new EntryHasNotEnoughRequiredFields("Entry doesn't have all required fields");
         }
     }
@@ -76,12 +65,10 @@ public abstract class Entry {
              allFields.keySet()) {
             if(!requiredFieldsList.contains(type)) {
                 if(!optionalFieldsList.contains(type)) {
-                    hasCorrectOptionalFields = false;
                     throw new EntryHasUnCorrectOptionalFields("Entry(" + this.type + ") has odd optional field(s): " + type);
                 }
             }
         }
-        hasCorrectOptionalFields = true;
     }
 
     /**
@@ -91,9 +78,9 @@ public abstract class Entry {
      */
     protected void checkOptionalFieldsWithVolumeOrNumber() {
         //return false when volume and number present simultaneously (at the same time)
-        hasCorrectOptionalFields = !(allFields.containsKey(FieldType.VOLUME) &&
+        boolean isChecked = !(allFields.containsKey(FieldType.VOLUME) &&
                 allFields.containsKey(FieldType.NUMBER));
-        if (hasCorrectOptionalFields) {
+        if (isChecked) {
             checkOptionalFields();
         } else {
             throw new EntryHasUnCorrectOptionalFields("Entry has Volume and Number optional fields at the same time");

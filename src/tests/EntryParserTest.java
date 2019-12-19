@@ -107,6 +107,4 @@ public class EntryParserTest {
         assertEquals("1982", EntryParser.parseFieldValues(values));
     }
 
-
-
 }

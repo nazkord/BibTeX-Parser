@@ -1,19 +1,25 @@
 package tests;
 
 import com.company.EntryFactory;
-import com.company.model.Entry;
+import com.company.exceptions.EntryHasNotEnoughRequiredFields;
+import com.company.exceptions.EntryHasUnCorrectOptionalFields;
+import com.company.exceptions.EntryHasUnCorrectRequiredFieldsException;
 import com.company.model.EntryType;
 import com.company.model.FieldType;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import java.util.EnumMap;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class EntryFactoryTest {
 
     EnumMap<FieldType, String> allFields;
+
+    @Rule
+    public ExpectedException exceptionRule = ExpectedException.none();
 
     //----------- Tests for Article -------------//
 
@@ -28,10 +34,8 @@ public class EntryFactoryTest {
             put(FieldType.NUMBER, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.ARTICLE,"",allFields);
-        assert entry != null;
-        assertTrue(entry.hasAllRequiredFields);
-        assertTrue(entry.hasCorrectOptionalFields);
+        EntryFactory.createEntryOf(EntryType.ARTICLE,"",allFields);
+        assertTrue(true);
     }
 
     @Test
@@ -44,10 +48,8 @@ public class EntryFactoryTest {
             put(FieldType.NUMBER, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.ARTICLE,"",allFields);
-        assert entry != null;
-        assertFalse(entry.hasAllRequiredFields);
-        assertTrue(entry.hasCorrectOptionalFields);
+        exceptionRule.expect(EntryHasNotEnoughRequiredFields.class);
+        EntryFactory.createEntryOf(EntryType.ARTICLE,"",allFields);
     }
 
     @Test
@@ -61,10 +63,8 @@ public class EntryFactoryTest {
             put(FieldType.NUMBER, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.ARTICLE,"",allFields);
-        assert entry != null;
-        assertTrue(entry.hasAllRequiredFields);
-        assertFalse(entry.hasCorrectOptionalFields);
+        exceptionRule.expect(EntryHasUnCorrectOptionalFields.class);
+        EntryFactory.createEntryOf(EntryType.ARTICLE,"",allFields);
     }
 
     @Test
@@ -76,10 +76,8 @@ public class EntryFactoryTest {
             put(FieldType.YEAR, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.ARTICLE,"",allFields);
-        assert entry != null;
-        assertTrue(entry.hasAllRequiredFields);
-        assertTrue(entry.hasCorrectOptionalFields);
+        EntryFactory.createEntryOf(EntryType.ARTICLE,"",allFields);
+        assertTrue(true);
     }
 
     //----------- Tests for Book -------------//
@@ -93,10 +91,8 @@ public class EntryFactoryTest {
             put(FieldType.YEAR, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.BOOK,"",allFields);
-        assert entry != null;
-        assertTrue(entry.hasAllRequiredFields);
-        assertTrue(entry.hasCorrectOptionalFields);
+        EntryFactory.createEntryOf(EntryType.BOOK,"",allFields);
+        assertTrue(true);
     }
 
     @Test
@@ -109,10 +105,8 @@ public class EntryFactoryTest {
             put(FieldType.NUMBER, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.BOOK,"",allFields);
-        assert entry != null;
-        assertFalse(entry.hasAllRequiredFields);
-        assertFalse(entry.hasCorrectOptionalFields);
+        exceptionRule.expect(EntryHasUnCorrectRequiredFieldsException.class);
+        EntryFactory.createEntryOf(EntryType.BOOK,"",allFields);
     }
 
     @Test
@@ -127,10 +121,8 @@ public class EntryFactoryTest {
             put(FieldType.SERIES, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.BOOK,"", allFields);
-        assert entry != null;
-        assertFalse(entry.hasAllRequiredFields);
-        assertTrue(entry.hasCorrectOptionalFields);
+        exceptionRule.expect(EntryHasUnCorrectRequiredFieldsException.class);
+        EntryFactory.createEntryOf(EntryType.BOOK,"", allFields);
     }
 
     @Test
@@ -145,10 +137,8 @@ public class EntryFactoryTest {
             put(FieldType.PAGES, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.BOOK,"", allFields);
-        assert entry != null;
-        assertTrue(entry.hasAllRequiredFields);
-        assertFalse(entry.hasCorrectOptionalFields);
+        exceptionRule.expect(EntryHasUnCorrectOptionalFields.class);
+        EntryFactory.createEntryOf(EntryType.BOOK,"", allFields);
     }
 
     @Test
@@ -163,10 +153,8 @@ public class EntryFactoryTest {
             put(FieldType.SERIES, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.BOOK,"", allFields);
-        assert entry != null;
-        assertTrue(entry.hasAllRequiredFields);
-        assertFalse(entry.hasCorrectOptionalFields);
+        exceptionRule.expect(EntryHasUnCorrectOptionalFields.class);
+        EntryFactory.createEntryOf(EntryType.BOOK,"", allFields);
     }
 
     @Test
@@ -179,10 +167,8 @@ public class EntryFactoryTest {
             put(FieldType.SERIES, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.BOOK,"", allFields);
-        assert entry != null;
-        assertFalse(entry.hasAllRequiredFields);
-        assertTrue(entry.hasCorrectOptionalFields);
+        exceptionRule.expect(EntryHasUnCorrectRequiredFieldsException.class);
+        EntryFactory.createEntryOf(EntryType.BOOK,"", allFields);
     }
 
     //----------- Tests for InBook -------------//
@@ -201,10 +187,8 @@ public class EntryFactoryTest {
             put(FieldType.SERIES, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.INBOOK,"", allFields);
-        assert entry != null;
-        assertFalse(entry.hasAllRequiredFields);
-        assertFalse(entry.hasCorrectOptionalFields);
+        exceptionRule.expect(EntryHasUnCorrectRequiredFieldsException.class);
+        EntryFactory.createEntryOf(EntryType.INBOOK,"", allFields);
     }
 
     @Test
@@ -219,10 +203,8 @@ public class EntryFactoryTest {
             put(FieldType.NUMBER, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.INBOOK,"", allFields);
-        assert entry != null;
-        assertTrue(entry.hasAllRequiredFields);
-        assertFalse(entry.hasCorrectOptionalFields);
+        exceptionRule.expect(EntryHasUnCorrectOptionalFields.class);
+        EntryFactory.createEntryOf(EntryType.INBOOK,"", allFields);
     }
 
     @Test
@@ -237,10 +219,8 @@ public class EntryFactoryTest {
             put(FieldType.YEAR, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.INBOOK,"", allFields);
-        assert entry != null;
-        assertFalse(entry.hasAllRequiredFields);
-        assertTrue(entry.hasCorrectOptionalFields);
+        exceptionRule.expect(EntryHasUnCorrectRequiredFieldsException.class);
+        EntryFactory.createEntryOf(EntryType.INBOOK,"", allFields);
     }
 
     //----------- Tests for Misc -------------//
@@ -252,10 +232,8 @@ public class EntryFactoryTest {
             put(FieldType.TITLE, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.MISC,"", allFields);
-        assert entry != null;
-        assertTrue(entry.hasAllRequiredFields);
-        assertTrue(entry.hasCorrectOptionalFields);
+        EntryFactory.createEntryOf(EntryType.MISC,"", allFields);
+        assertTrue(true);
     }
 
     @Test
@@ -266,9 +244,7 @@ public class EntryFactoryTest {
             put(FieldType.TITLE, "");
         }};
 
-        Entry entry = EntryFactory.createEntryOf(EntryType.MISC,"", allFields);
-        assert entry != null;
-        assertTrue(entry.hasAllRequiredFields);
-        assertFalse(entry.hasCorrectOptionalFields);
+        exceptionRule.expect(EntryHasUnCorrectOptionalFields.class);
+        EntryFactory.createEntryOf(EntryType.MISC,"", allFields);
     }
 }

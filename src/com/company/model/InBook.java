@@ -1,5 +1,8 @@
 package com.company.model;
 
+import com.company.exceptions.EntryHasNotEnoughRequiredFields;
+import com.company.exceptions.EntryHasUnCorrectRequiredFieldsException;
+
 import java.util.*;
 
 public class InBook extends Entry {
@@ -36,13 +39,18 @@ public class InBook extends Entry {
         requiredFieldsWithoutOr.remove(FieldType.EDITOR);
         requiredFieldsWithoutOr.remove(FieldType.CHAPTER);
         requiredFieldsWithoutOr.remove(FieldType.PAGES);
-        this.hasAllRequiredFields = allFields.keySet().containsAll(requiredFieldsWithoutOr);
+        boolean isCorrect = allFields.keySet().containsAll(requiredFieldsWithoutOr);
 
-        if(hasAllRequiredFields) {
-            hasAllRequiredFields = (allFields.containsKey(FieldType.AUTHOR) ^
+        if(isCorrect) {
+            isCorrect = (allFields.containsKey(FieldType.AUTHOR) ^
                     allFields.containsKey(FieldType.EDITOR)) &&
                     (allFields.containsKey(FieldType.CHAPTER) ^
                             allFields.containsKey(FieldType.PAGES));
+            if(!isCorrect) {
+                throw new EntryHasUnCorrectRequiredFieldsException("Entry has both Editor and Author field");
+            }
+        } else {
+            throw new EntryHasNotEnoughRequiredFields("Entry doesn't have all required fields");
         }
     }
 }

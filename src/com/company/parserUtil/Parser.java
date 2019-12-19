@@ -6,18 +6,18 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- *
+ * Class for parsing provided file in inputs into entries specified in BibTex documentation
  */
 public class Parser {
 
     /**
-     *
+     * Variable that holds provided file in String
      */
     private StringBuilder fileInString;
 
     /**
-     *
-     * @param fileInString
+     * Constructor that creates a new instance of Parser.class
+     * @param fileInString file provided in input in String
      */
     public Parser(StringBuilder fileInString) {
         this.fileInString = fileInString;
@@ -29,8 +29,8 @@ public class Parser {
     }
 
     /**
-     *
-     * @return
+     * Main method that contains parser logic
+     * @return Map of EntriesKey - Entry
      */
     public Map<String, Entry> parse() {
         deleteBeforeAtSign(fileInString); //delete everything before first entry
@@ -56,8 +56,8 @@ public class Parser {
     }
 
     /**
-     *
-     * @param fileInString
+     * Deletes everything before @ sign in file
+     * @param fileInString file in String after deleting
      */
     private void deleteBeforeAtSign(StringBuilder fileInString) {
         int b = fileInString.indexOf("@");
