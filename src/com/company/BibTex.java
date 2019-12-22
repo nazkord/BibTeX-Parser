@@ -7,6 +7,7 @@ import com.company.model.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -42,6 +43,21 @@ public class BibTex {
         return new StringBuilder(file);
     }
 
+    public void display() {
+        entries.values().forEach(entry -> System.out.println(entry.toString()));
+    }
+
+    public void filterByCategories(List<EntryType> categories) {
+        entries = entries.entrySet()
+                .stream()
+                .filter(mapEntry -> categories.contains(mapEntry.getValue().getType()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    }
+
+    public void filterByAuthors(List<String> authors) {
+
+    }
+
     private void setFileInString(StringBuilder fileInString) {
         this.fileInString = fileInString;
     }
@@ -56,12 +72,5 @@ public class BibTex {
 
     public Map<String, Entry> getEntriesMap() {
         return entries;
-    }
-
-    public void filterByCategories(List<EntryType> categories) {
-        entries = entries.entrySet()
-                .stream()
-                .filter(mapEntry -> categories.contains(mapEntry.getValue().getType()))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 }

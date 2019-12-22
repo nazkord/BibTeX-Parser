@@ -15,7 +15,7 @@ public class InputHandler {
             BibTex bibTex = BibTex.createOfFile(args[0]);
             switch (args.length) {
                 case 1 : {
-                    display(bibTex);
+                    bibTex.display();
                     break;
                 }
                 case 2 : {
@@ -23,7 +23,10 @@ public class InputHandler {
                     break;
                 }
                 case 3 : {
-
+                    if(args[2].trim().equals("")) {
+                        filterByAuthors(bibTex, convertAuthorsToList(args[2]));
+                        break;
+                    }
                 }
             }
         }
@@ -36,6 +39,15 @@ public class InputHandler {
             categoriesList.add(EntryType.valueOf(s.trim().toUpperCase()));
         }
         return categoriesList;
+    }
+
+    private static List<String> convertAuthorsToList(String authorsInString) {
+        String[] categories = authorsInString.split(",");
+        List<String> authorsList = new ArrayList<>();
+        for (String s : categories) {
+            authorsList.add(s.trim().toUpperCase());
+        }
+        return authorsList;
     }
 
     private static void optionWithoutArguments() {
@@ -51,12 +63,13 @@ public class InputHandler {
         System.out.println(stringBuilder);
     }
 
-    private static void display(BibTex bibTex) {
-        Printer.printBibTex(new ArrayList<>(bibTex.getEntriesMap().values()));
-    }
-
     private static void filterByCategories(BibTex bibTex, List<EntryType> categories) {
         bibTex.filterByCategories(categories);
-        display(bibTex);
+        bibTex.display();
+    }
+
+    private static void filterByAuthors(BibTex bibTex, List<String> authors) {
+        bibTex.filterByAuthors(authors);
+        bibTex.display();
     }
 }
