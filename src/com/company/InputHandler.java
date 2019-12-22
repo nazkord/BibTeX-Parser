@@ -23,7 +23,7 @@ public class InputHandler {
                     break;
                 }
                 case 3 : {
-                    if(args[2].trim().equals("")) {
+                    if(args[1].trim().equals("")) {
                         filterByAuthors(bibTex, convertAuthorsToList(args[2]));
                         break;
                     }
@@ -45,7 +45,7 @@ public class InputHandler {
         String[] categories = authorsInString.split(",");
         List<String> authorsList = new ArrayList<>();
         for (String s : categories) {
-            authorsList.add(s.trim().toUpperCase());
+            authorsList.add(s.toUpperCase());
         }
         return authorsList;
     }
@@ -64,12 +64,10 @@ public class InputHandler {
     }
 
     private static void filterByCategories(BibTex bibTex, List<EntryType> categories) {
-        bibTex.filterByCategories(categories);
-        bibTex.display();
+        bibTex.filterByCategories(categories).forEach((s, entry) -> System.out.println(entry.toString()));
     }
 
     private static void filterByAuthors(BibTex bibTex, List<String> authors) {
-        bibTex.filterByAuthors(authors);
-        bibTex.display();
+        bibTex.filterByAuthors(authors).forEach(((s, entry) -> System.out.println(entry.toString())));
     }
 }

@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -47,15 +48,32 @@ public class BibTex {
         entries.values().forEach(entry -> System.out.println(entry.toString()));
     }
 
-    public void filterByCategories(List<EntryType> categories) {
-        entries = entries.entrySet()
+    public Map<String, Entry> filterByCategories(List<EntryType> categories) {
+        return entries.entrySet()
                 .stream()
                 .filter(mapEntry -> categories.contains(mapEntry.getValue().getType()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
-    public void filterByAuthors(List<String> authors) {
+    public Map<String, Entry> filterByAuthors(List<String> authors) {
+        return entries.entrySet()
+                .stream()
+                .filter(mapEntry -> containsInAuthors(authors, mapEntry.getValue().getAllFields().get(FieldType.AUTHOR)))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    }
 
+    private boolean containsInAuthors(List<String> authors, String authorsInString) {
+        if (authorsInString != null) {
+            String[] splitValues = authorsInString.split("and");
+            for (String s : splitValues) {
+                for (String author : authors) {
+                    if(s.toUpperCase().contains(author.toUpperCase())) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     private void setFileInString(StringBuilder fileInString) {

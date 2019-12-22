@@ -125,6 +125,7 @@ public abstract class Entry {
                 String.format("+------------------------+--------------------------------------------------------------+%n");
         full.append(header);
         full.append(body);
+        full.append("\n");
 
         return full.toString();
     }
