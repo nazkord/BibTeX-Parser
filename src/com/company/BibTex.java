@@ -1,26 +1,36 @@
 package com.company;
 
+import com.company.model.Entry;
+import com.company.model.EntryType;
+import com.company.model.FieldType;
 import com.company.parserUtil.Parser;
 import com.company.parserUtil.StringVariableUtil;
-import com.company.model.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-//TODO: make documentation and bibTex as singleton
+//TODO: bibTex as singleton
+
+/**
+ * Main class that contain a map of entries that is being created
+ * from the file that user provides. Makes available to filter map
+ * of entries by categories (Entry's types) and authors
+ */
 public class BibTex {
 
     private StringBuilder fileInString;
     private Parser parser;
     private Map<String, Entry> entries;
 
+    /**
+     * Static factory for creating bibTex class from given file
+     * @param filePath path of the file with .bib extension
+     * @return bibText object
+     */
     public static BibTex createOfFile(String filePath) {
         BibTex bibTex = new BibTex();
         try {
@@ -34,6 +44,12 @@ public class BibTex {
         return bibTex;
     }
 
+    /**
+     * Reads from given file to string
+     * @param filePath path of the file with .bib extension
+     * @return provided file in string
+     * @throws IOException Throws exception when reading from file is failed
+     */
     public StringBuilder readFile(String filePath) throws IOException {
         String file;
         try {
@@ -44,10 +60,18 @@ public class BibTex {
         return new StringBuilder(file);
     }
 
+    /**
+     * Prints every entry from map
+     */
     public void display() {
         entries.values().forEach(entry -> System.out.println(entry.toString()));
     }
 
+    /**
+     * Filters map of entries by categories
+     * @param categories List of categories
+     * @return map of filtered entries
+     */
     public Map<String, Entry> filterByCategories(List<EntryType> categories) {
         return entries.entrySet()
                 .stream()
@@ -55,6 +79,11 @@ public class BibTex {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
+    /**
+     * Filters map of entries by authors
+     * @param authors List of authors
+     * @return map of filtered entries
+     */
     public Map<String, Entry> filterByAuthors(List<String> authors) {
         return entries.entrySet()
                 .stream()
@@ -62,6 +91,12 @@ public class BibTex {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
+    /**
+     * Check whether particular author is in the filtering list
+     * @param authors List of authors
+     * @param authorsInString author for checking
+     * @return true if author matches, false if not
+     */
     private boolean containsInAuthors(List<String> authors, String authorsInString) {
         if (authorsInString != null) {
             String[] splitValues = authorsInString.split("and");
@@ -76,6 +111,12 @@ public class BibTex {
         return false;
     }
 
+    /**
+     * Filters map of entries by categories and authors
+     * @param categories List of categories
+     * @param authors List of authors
+     * @return map of filtered entries
+     */
     public Map<String, Entry> filterByAuthorsAndCategories(List<EntryType> categories, List<String> authors) {
         return entries.entrySet()
                 .stream()

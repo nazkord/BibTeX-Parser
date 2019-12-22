@@ -5,8 +5,15 @@ import com.company.model.EntryType;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Handler for input arguments
+ */
 public class InputHandler {
 
+    /**
+     * Invokes different methods depends on the amount of arguments
+     * @param args program's arguments
+     */
     public static void handle(String[] args) {
         if(args.length == 0) {
             optionWithoutArguments();
@@ -34,6 +41,11 @@ public class InputHandler {
         }
     }
 
+    /**
+     * Converts categories separated by comma into list of categories
+     * @param categoriesInString categories in string separated by comma
+     * @return List of categories
+     */
     private static List<EntryType> convertCategoriesToList(String categoriesInString) {
         String[] categories = categoriesInString.split(",");
         List<EntryType> categoriesList = new ArrayList<>();
@@ -43,6 +55,11 @@ public class InputHandler {
         return categoriesList;
     }
 
+    /**
+     * Converts authors separated by comma into list of authors
+     * @param authorsInString authors in string separated by comma
+     * @return List of authors
+     */
     private static List<String> convertAuthorsToList(String authorsInString) {
         String[] categories = authorsInString.split(",");
         List<String> authorsList = new ArrayList<>();
@@ -52,6 +69,9 @@ public class InputHandler {
         return authorsList;
     }
 
+    /**
+     * Displays information (help) for user in how to use this program
+     */
     private static void optionWithoutArguments() {
         String stringBuilder = "---------------------------------------------------------------" +
                 "\nBibTeX Parser Help" +
@@ -65,16 +85,32 @@ public class InputHandler {
         System.out.println(stringBuilder);
     }
 
+    /**
+     * Displays entries filtered by categories
+     * @param bibTex bibTex object
+     * @param categories List of categories
+     */
     private static void filterByCategories(BibTex bibTex, List<EntryType> categories) {
         bibTex.filterByCategories(categories).values()
                 .forEach(entry -> System.out.println(entry.toString()));
     }
 
+    /**
+     * Displays entries filtered by authors
+     * @param bibTex bibTex object
+     * @param authors List of authors
+     */
     private static void filterByAuthors(BibTex bibTex, List<String> authors) {
         bibTex.filterByAuthors(authors).values()
                 .forEach((entry -> System.out.println(entry.toString())));
     }
 
+    /**
+     * Displays entries filtered by categories and authors
+     * @param bibTex bibTex object
+     * @param categories List of categories
+     * @param authors List of authors
+     */
     private static void filterByAuthorsAndCategories(BibTex bibTex, List<EntryType> categories, List<String> authors) {
         bibTex.filterByAuthorsAndCategories(categories, authors).values()
                 .forEach(entry -> System.out.println(entry.toString()));

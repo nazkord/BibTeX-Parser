@@ -53,7 +53,7 @@ public abstract class Entry {
     protected void checkRequiredFields() {
         boolean checked = allFields.keySet().containsAll(requiredFieldsList);
         if(!checked) {
-            throw new EntryHasNotEnoughRequiredFields("Entry: " +  type.toString() + " doesn't have all required fields");
+            throw new EntryHasNotEnoughRequiredFields("Entry(" + this.type + ") doesn't have all required fields");
         }
     }
 
@@ -83,7 +83,7 @@ public abstract class Entry {
         if (isChecked) {
             checkOptionalFields();
         } else {
-            throw new EntryHasUnCorrectOptionalFields("Entry has Volume and Number optional fields at the same time");
+            throw new EntryHasUnCorrectOptionalFields("Entry(" + this.type + ") has Volume and Number optional fields at the same time");
         }
     }
 

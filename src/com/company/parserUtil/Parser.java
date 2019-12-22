@@ -39,7 +39,7 @@ public class Parser {
         //delete predefined strings
         StringBuilder s = new StringBuilder(fileInString.toString().replaceAll(StringVariableUtil.regex, ""));
         fileInString = s;
-        List<String> entriesInString = new LinkedList<>(parseToEntries(fileInString));
+        List<String> entriesInString = new LinkedList<>(splitToEntries(fileInString));
         entriesInString.remove(0); //for parsing reasons
         StringVariableUtil.parseExpandedStrings(entriesInString);
 
@@ -65,19 +65,19 @@ public class Parser {
     }
 
     /**
-     *
-     * @param fileInString
-     * @return
+     * Split string to entries
+     * @param fileInString fileInString
+     * @return List of split entries (in string)
      */
-    private List<String> parseToEntries(StringBuilder fileInString) {
+    private List<String> splitToEntries(StringBuilder fileInString) {
         String[] entries = fileInString.toString().split("\\n@");
         return Arrays.asList(entries);
     }
 
     /**
-     *
-     * @param entries
-     * @return
+     * Converts List of entries to Map where key in map is a key in entry
+     * @param entries list of entries
+     * @return map of entries where key is a key in entry
      */
     private Map<String, Entry> convertToMap(List<Entry> entries) {
         Map<String, Entry> entriesMap = new HashMap<>();
@@ -88,9 +88,9 @@ public class Parser {
     }
 
     /**
-     *
-     * @param entries
-     * @param pattern
+     * Deletes entries by type
+     * @param entries list of entries
+     * @param pattern entry type for deleting
      */
     private void deleteEntriesByPattern(List<String> entries, String pattern) {
         entries.removeAll(entries.stream()
