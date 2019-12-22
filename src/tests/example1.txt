@@ -1,5 +1,4 @@
 @MISC{misc-minimal,
-   key = "Missilany",
    note = "This is a minimal MISC entry",
 }
 

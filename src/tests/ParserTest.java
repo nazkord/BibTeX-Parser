@@ -42,7 +42,7 @@ public class ParserTest {
         for(Map.Entry<String, String> entry : StringVariableUtil.stringsMap.entrySet()) {
             System.out.println(entry.getKey() + ":" + entry.getValue());
         }
-        assertEquals(3, StringVariableUtil.stringsMap.size());
+        assertEquals(2, StringVariableUtil.stringsMap.size());
     }
 
     @Test

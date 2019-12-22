@@ -2,13 +2,17 @@ package com.company;
 
 import com.company.parserUtil.Parser;
 import com.company.parserUtil.StringVariableUtil;
-import com.company.model.Entry;
+import com.company.model.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+//TODO: make documentation and bibTex as singleton
 public class BibTex {
 
     private StringBuilder fileInString;
@@ -52,5 +56,12 @@ public class BibTex {
 
     public Map<String, Entry> getEntriesMap() {
         return entries;
+    }
+
+    public void filterByCategories(List<EntryType> categories) {
+        entries = entries.entrySet()
+                .stream()
+                .filter(mapEntry -> categories.contains(mapEntry.getValue().getType()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 }
