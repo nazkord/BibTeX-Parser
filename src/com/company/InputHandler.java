@@ -1,10 +1,9 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.company.model.EntryType;
 
-import com.company.model.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class InputHandler {
 
@@ -25,8 +24,11 @@ public class InputHandler {
                 case 3 : {
                     if(args[1].trim().equals("")) {
                         filterByAuthors(bibTex, convertAuthorsToList(args[2]));
-                        break;
+                    } else {
+                        filterByAuthorsAndCategories(bibTex, convertCategoriesToList(args[1]),
+                                convertAuthorsToList(args[2]));
                     }
+                    break;
                 }
             }
         }
@@ -64,10 +66,17 @@ public class InputHandler {
     }
 
     private static void filterByCategories(BibTex bibTex, List<EntryType> categories) {
-        bibTex.filterByCategories(categories).forEach((s, entry) -> System.out.println(entry.toString()));
+        bibTex.filterByCategories(categories).values()
+                .forEach(entry -> System.out.println(entry.toString()));
     }
 
     private static void filterByAuthors(BibTex bibTex, List<String> authors) {
-        bibTex.filterByAuthors(authors).forEach(((s, entry) -> System.out.println(entry.toString())));
+        bibTex.filterByAuthors(authors).values()
+                .forEach((entry -> System.out.println(entry.toString())));
+    }
+
+    private static void filterByAuthorsAndCategories(BibTex bibTex, List<EntryType> categories, List<String> authors) {
+        bibTex.filterByAuthorsAndCategories(categories, authors).values()
+                .forEach(entry -> System.out.println(entry.toString()));
     }
 }

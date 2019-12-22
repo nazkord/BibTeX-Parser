@@ -81,7 +81,7 @@
 }
 
 @PHDTHESIS{phdthesis-full,
-   author = "F. Phidias Phony-Baloney",
+   author = "Tom Lol",
    title = "Fighting Fire with Fire: Festooning (F)rench Phrases",
    school = "Fanstord University",
    type = "(PhD) Dissertation",
@@ -92,7 +92,7 @@
 }
 
 @TECHREPORT{techreport-minimal,
-   author = "Tom Terrific",
+   author = "F. Phidias Phony-Baloney",
    title = "An ($O(n \log n / \! \log\log n)$) Sorting Algorithm",
    institution = "Fanstord University",
    year = 1988,

@@ -76,6 +76,16 @@ public class BibTex {
         return false;
     }
 
+    public Map<String, Entry> filterByAuthorsAndCategories(List<EntryType> categories, List<String> authors) {
+        return entries.entrySet()
+                .stream()
+                .filter(mapEntry ->
+                        categories.contains(mapEntry.getValue().getType()) &&
+                            containsInAuthors(authors, mapEntry.getValue().getAllFields().get(FieldType.AUTHOR))
+                )
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    }
+
     private void setFileInString(StringBuilder fileInString) {
         this.fileInString = fileInString;
     }

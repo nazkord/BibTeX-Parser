@@ -53,7 +53,7 @@ public abstract class Entry {
     protected void checkRequiredFields() {
         boolean checked = allFields.keySet().containsAll(requiredFieldsList);
         if(!checked) {
-            throw new EntryHasNotEnoughRequiredFields("Entry doesn't have all required fields");
+            throw new EntryHasNotEnoughRequiredFields("Entry: " +  type.toString() + " doesn't have all required fields");
         }
     }
 
