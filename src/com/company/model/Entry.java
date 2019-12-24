@@ -10,7 +10,6 @@ import java.util.Map;
 
 /**
  * This class represents object of BibTex record.
- * <p>
  */
 public abstract class Entry {
 
