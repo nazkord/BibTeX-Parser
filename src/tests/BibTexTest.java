@@ -12,13 +12,13 @@ public class BibTexTest {
 
     @Test
     public void createOfFile() {
-        BibTex bibTex = BibTex.createOfFile(filePath);
-        assertEquals(3, bibTex.getEntriesMap().size());
+        BibTex.createInstanceOfFile(filePath);
+        assertEquals(3, BibTex.getInstance().getEntriesMap().size());
     }
 
     @Test
     public void createOfFile2() {
-        BibTex bibTex = BibTex.createOfFile(filePath);
-        assertEquals(3, bibTex.getEntriesMap().size());
+        BibTex.createInstanceOfFile(filePath);
+        assertEquals(3, BibTex.getInstance().getEntriesMap().size());
     }
 }

@@ -18,21 +18,21 @@ public class InputHandler {
         if(args.length == 0) {
             optionWithoutArguments();
         } else {
-            BibTex bibTex = BibTex.createOfFile(args[0]);
+            BibTex.createInstanceOfFile(args[0]);
             switch (args.length) {
                 case 1 : {
-                    bibTex.display();
+                    BibTex.getInstance().display();
                     break;
                 }
                 case 2 : {
-                    filterByCategories(bibTex, convertCategoriesToList(args[1]));
+                    filterByCategories(convertCategoriesToList(args[1]));
                     break;
                 }
                 case 3 : {
                     if(args[1].trim().equals("")) {
-                        filterByAuthors(bibTex, convertAuthorsToList(args[2]));
+                        filterByAuthors(convertAuthorsToList(args[2]));
                     } else {
-                        filterByAuthorsAndCategories(bibTex, convertCategoriesToList(args[1]),
+                        filterByAuthorsAndCategories(convertCategoriesToList(args[1]),
                                 convertAuthorsToList(args[2]));
                     }
                     break;
@@ -87,32 +87,29 @@ public class InputHandler {
 
     /**
      * Displays entries filtered by categories
-     * @param bibTex bibTex object
      * @param categories List of categories
      */
-    private static void filterByCategories(BibTex bibTex, List<EntryType> categories) {
-        bibTex.filterByCategories(categories).values()
+    private static void filterByCategories(List<EntryType> categories) {
+        BibTex.getInstance().filterByCategories(categories).values()
                 .forEach(entry -> System.out.println(entry.toString()));
     }
 
     /**
      * Displays entries filtered by authors
-     * @param bibTex bibTex object
      * @param authors List of authors
      */
-    private static void filterByAuthors(BibTex bibTex, List<String> authors) {
-        bibTex.filterByAuthors(authors).values()
+    private static void filterByAuthors(List<String> authors) {
+        BibTex.getInstance().filterByAuthors(authors).values()
                 .forEach((entry -> System.out.println(entry.toString())));
     }
 
     /**
      * Displays entries filtered by categories and authors
-     * @param bibTex bibTex object
      * @param categories List of categories
      * @param authors List of authors
      */
-    private static void filterByAuthorsAndCategories(BibTex bibTex, List<EntryType> categories, List<String> authors) {
-        bibTex.filterByAuthorsAndCategories(categories, authors).values()
+    private static void filterByAuthorsAndCategories(List<EntryType> categories, List<String> authors) {
+        BibTex.getInstance().filterByAuthorsAndCategories(categories, authors).values()
                 .forEach(entry -> System.out.println(entry.toString()));
     }
 }

@@ -13,35 +13,42 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-//TODO: bibTex as singleton
-
 /**
- * Main class that contain a map of entries that is being created
+ * Main singleton class that contain a map of entries that is being created
  * from the file that user provides. Makes available to filter map
  * of entries by categories (Entry's types) and authors
  */
 public class BibTex {
 
+    private static BibTex instance;
     private StringBuilder fileInString;
     private Parser parser;
     private Map<String, Entry> entries;
 
     /**
+     * Gets instance of BibTex class
+     * @return Instance of BibTex class
+     */
+    public static BibTex getInstance() {
+        return instance;
+    }
+
+    /**
      * Static factory for creating bibTex class from given file
      * @param filePath path of the file with .bib extension
-     * @return bibText object
      */
-    public static BibTex createOfFile(String filePath) {
-        BibTex bibTex = new BibTex();
-        try {
-            bibTex.setFileInString(bibTex.readFile(filePath));
-        } catch (IOException e) {
-            e.printStackTrace();
+    public static void createInstanceOfFile(String filePath) {
+        if(instance == null) {
+            instance = new BibTex();
+            try {
+                instance.setFileInString(instance.readFile(filePath));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            StringVariableUtil.createMapOfStrings(instance.getFileInString());
+            instance.parser = new Parser(instance.getFileInString());
+            instance.entries = instance.getParser().parse();
         }
-        StringVariableUtil.createMapOfStrings(bibTex.getFileInString());
-        bibTex.parser = new Parser(bibTex.getFileInString());
-        bibTex.entries = bibTex.getParser().parse();
-        return bibTex;
     }
 
     /**
