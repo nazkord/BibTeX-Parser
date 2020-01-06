@@ -31,7 +31,7 @@ public class EntryFactory {
             case INBOOK: {
                 return new InBook(type, key, allFields);
             }
-            case INCOLLETION: {
+            case INCOLLECTION: {
                 return new InCollection(type, key, allFields);
             }
             case INPROCEEDINGS: {
@@ -49,7 +49,8 @@ public class EntryFactory {
             case PHDTHESIS: {
                 return new PhdThesis(type, key, allFields);
             }
-            case PROCEEDINGS: {
+            case PROCEEDINGS:
+            case PROCEEDING : {
                 return new Proceedings(type, key, allFields);
             }
             case TECHREPORT: {
