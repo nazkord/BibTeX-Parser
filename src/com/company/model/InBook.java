@@ -47,10 +47,10 @@ public class InBook extends Entry {
                     (allFields.containsKey(FieldType.CHAPTER) ^
                             allFields.containsKey(FieldType.PAGES));
             if(!isCorrect) {
-                throw new EntryHasUnCorrectRequiredFieldsException("Entry has both Editor and Author field");
+                throw new EntryHasUnCorrectRequiredFieldsException("Entry (" + this.type + ": " + this.key + ") has both Editor and Author field");
             }
         } else {
-            throw new EntryHasNotEnoughRequiredFields("Entry doesn't have all required fields");
+            throw new EntryHasNotEnoughRequiredFields("Entry (" + this.type + ": " + this.key + ") doesn't have all required fields");
         }
     }
 }

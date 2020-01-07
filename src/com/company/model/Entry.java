@@ -52,7 +52,7 @@ public abstract class Entry {
     protected void checkRequiredFields() {
         boolean checked = allFields.keySet().containsAll(requiredFieldsList);
         if(!checked) {
-            throw new EntryHasNotEnoughRequiredFields("Entry(" + this.type + ") doesn't have all required fields");
+            throw new EntryHasNotEnoughRequiredFields("Entry (" + this.type + ": " + this.key + ") doesn't have all required fields");
         }
     }
 
@@ -64,7 +64,7 @@ public abstract class Entry {
              allFields.keySet()) {
             if(!requiredFieldsList.contains(type)) {
                 if(!optionalFieldsList.contains(type)) {
-                    throw new EntryHasUnCorrectOptionalFields("Entry(" + this.type + ") has odd optional field(s): " + type);
+                    throw new EntryHasUnCorrectOptionalFields("Entry (" + this.type + ": " + this.key + ") has odd optional field(s): " + type);
                 }
             }
         }
@@ -82,7 +82,7 @@ public abstract class Entry {
         if (isChecked) {
             checkOptionalFields();
         } else {
-            throw new EntryHasUnCorrectOptionalFields("Entry(" + this.type + ") has Volume and Number optional fields at the same time");
+            throw new EntryHasUnCorrectOptionalFields("Entry (" + this.type + ": " + this.key + ") has Volume and Number optional fields at the same time");
         }
     }
 
