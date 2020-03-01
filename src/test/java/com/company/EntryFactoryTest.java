@@ -1,6 +1,5 @@
-package tests;
+package com.company;
 
-import com.company.EntryFactory;
 import com.company.exceptions.EntryHasNotEnoughRequiredFields;
 import com.company.exceptions.EntryHasUnCorrectOptionalFields;
 import com.company.exceptions.EntryHasUnCorrectRequiredFieldsException;

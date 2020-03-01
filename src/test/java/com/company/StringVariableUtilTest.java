@@ -1,4 +1,4 @@
-package tests;
+package com.company;
 
 import com.company.parserUtil.Parser;
 import com.company.parserUtil.StringVariableUtil;
@@ -21,7 +21,7 @@ public class StringVariableUtilTest {
     @Before
     public void initializingFile() {
         try {
-            file = new String(Files.readAllBytes(Paths.get("src/tests/example1.txt")));
+            file = new String(Files.readAllBytes(Paths.get("src/test/resourses/example1.txt")));
             parser = new Parser(new StringBuilder(file));
         } catch (IOException e) {
             e.printStackTrace();
@@ -31,7 +31,7 @@ public class StringVariableUtilTest {
 
     @Test
     public void testSizeOfMapOfStrings() {
-        assertEquals(3, StringVariableUtil.stringsMap.size());
+        assertEquals(32, StringVariableUtil.stringsMap.size());
     }
 
     @Test

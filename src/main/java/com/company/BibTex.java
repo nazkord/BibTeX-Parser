@@ -25,6 +25,9 @@ public class BibTex {
     private Parser parser;
     private Map<String, Entry> entries;
 
+    private BibTex() {
+    }
+
     /**
      * Gets instance of BibTex class
      * @return Instance of BibTex class
@@ -37,7 +40,7 @@ public class BibTex {
      * Static factory for creating bibTex class from given file
      * @param filePath path of the file with .bib extension
      */
-    public static void createInstanceOfFile(String filePath) {
+    public static BibTex getInstance(String filePath) {
         if(instance == null) {
             instance = new BibTex();
             try {
@@ -49,6 +52,7 @@ public class BibTex {
             instance.parser = new Parser(instance.getFileInString());
             instance.entries = instance.getParser().parse();
         }
+        return instance;
     }
 
     /**

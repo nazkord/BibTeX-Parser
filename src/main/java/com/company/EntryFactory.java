@@ -10,6 +10,9 @@ import java.util.Map;
  */
 public class EntryFactory {
 
+    private EntryFactory() {
+    }
+
     /**
      * Creates new Entry based on params
      * @param type The type of entry

@@ -1,4 +1,4 @@
-package tests;
+package com.company;
 
 import com.company.parserUtil.EntryParser;
 import com.company.parserUtil.StringVariableUtil;

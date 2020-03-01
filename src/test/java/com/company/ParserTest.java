@@ -1,4 +1,4 @@
-package tests;
+package com.company;
 
 import com.company.parserUtil.EntryParser;
 import com.company.parserUtil.Parser;
@@ -18,7 +18,7 @@ public class ParserTest {
 
     {
         try {
-            file = new String(Files.readAllBytes(Paths.get("src/tests/example1.txt")));
+            file = new String(Files.readAllBytes(Paths.get("src/test/resourses/example1.txt")));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -42,7 +42,7 @@ public class ParserTest {
         for(Map.Entry<String, String> entry : StringVariableUtil.stringsMap.entrySet()) {
             System.out.println(entry.getKey() + ":" + entry.getValue());
         }
-        assertEquals(2, StringVariableUtil.stringsMap.size());
+        assertEquals(30, StringVariableUtil.stringsMap.size());
     }
 
     @Test
