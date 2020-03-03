@@ -1,4 +1,4 @@
-# BibTex-Parser
+# BibTeX Parser
 
 Java command line application for parsing files with .bib extensions.
 
