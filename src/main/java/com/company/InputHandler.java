@@ -18,9 +18,10 @@ public class InputHandler {
         if(args.length == 0) {
             optionWithoutArguments();
         } else {
+            BibTex bibTex = BibTex.getInstance(args[0]);
             switch (args.length) {
                 case 1 : {
-                    BibTex.getInstance(args[0]).display();
+                    bibTex.display();
                     break;
                 }
                 case 2 : {
