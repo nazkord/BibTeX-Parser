@@ -2,11 +2,30 @@
 
 Program for parsing files with .bib extensions. There is possibility to search items with filtering.
 
-# Documentation
+## Documentation
 
 [Click here](https://nazkord.github.io/BibTex-Parser/)
 
-# Guide
+## Building project
+
+1. Download project from GitHub
+2. cd to your project root folder in command line.
+3. Build project and create jar using the following command:
+```bash
+mvn clean install
+```
+## Running project
+
+1. Type
+```bash 
+cd target
+```
+2. Run project using the following command:
+```bash
+java -jar BibtexParser-1.0.jar
+```
+
+## How to use arguments
 
 BibTeX Parser Help:
 Every argument should be located at "" and inside separated with comma.<br/>
