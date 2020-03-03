@@ -1,6 +1,13 @@
 # BibTex-Parser
 
-Program for parsing files with .bib extensions. There is possibility to search items with filtering.
+Java command line application for parsing files with .bib extensions.
+
+## Features
+
+1. checking correctness of items in file
+2. searching specific Author
+3. searching multiple categories
+4. searching both of mentioned
 
 ## Documentation
 
